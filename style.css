@@ -1,0 +1,274 @@
+/* Adicionando fontes do Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+/* Reiniciando o padding e margin padrão */
+* {
+    padding: 0;
+    margin: 0;
+}
+
+/* Estilização do cabeçalho */
+header {
+    height: 5em;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #333;
+    padding: 0 380px;
+    font-family: 'Roboto', sans-serif; /* Aplicando a fonte Roboto ao cabeçalho */
+}
+
+/* Estilização do título */
+header h1 {
+    font-family: 'Indie Flower', cursive; /* Aplicando a fonte Indie Flower ao título */
+    font-size: 2em; /* Tamanho do título */
+    color: #fff; /* Cor do título */
+}
+
+/* Estilização da navegação */
+nav {
+    padding: 10px 0;
+    text-align: center;
+}
+
+nav ul {    
+    list-style: none;
+    display: inline-block;
+}
+
+nav ul li {
+    display: inline;
+    margin: 0 20px;
+}
+
+nav ul li a {
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 20px;
+    font-family: 'Roboto', sans-serif; /* Aplicando a fonte Roboto */
+}
+
+nav ul li a:hover{
+    text-decoration: underline;
+}
+
+/* Estilização do container */
+.container {
+    padding: 0 20%;
+    margin-top: 50px;
+    font-family: 'Roboto', sans-serif; /* Aplicando a fonte Roboto */
+}
+
+/* Estilização da seção sobre */
+.ContentAbout {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 40px;
+}
+
+.ContentAbout div {
+    margin-left: 30px;
+}
+
+.aboutText {
+    flex: 1;
+    margin-left: 20px;
+}
+
+.aboutText h2 {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.aboutText p {
+    font-size: 16px;
+    line-height: 1.6;
+}
+
+.ContentAbout img {
+    max-height: 300px;
+}
+
+/* Estilização dos produtos */
+.products {
+    display: flex;
+    justify-content: space-between;
+}
+
+/* Estilização da seção de produtos */
+.sectionProduct h2 {
+    margin-bottom: 20px;
+}
+
+/* Estilização dos itens */
+.item {
+    display: flex;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    text-align: center;
+    width: 230px;
+    flex-wrap: wrap;
+    align-content: space-between;
+    align-items: center;
+    justify-content: center;
+}
+
+.item img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+}
+
+.item h3 {
+    font-size: 1.5em;
+    margin: 10px 0;
+}
+
+.item p {
+    font-size: 1em;
+    color: #666;
+    margin: 10px 0;
+}
+
+.item button {
+    background-color: #28a745;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 1em;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.item button:hover {
+    background-color: #218838;
+}
+
+/* Media Queries para responsividade */
+
+/* Dispositivos médios (tablets em paisagem, 641px a 1023px) */
+@media (min-width: 641px) and (max-width: 1023px) {
+    header {
+        padding: 0 10%;
+    }
+
+    nav ul li a {
+        font-size: 1.25em; /* Convertendo de pixels para em */
+    }
+
+    header h1 {
+        font-size: 2.19em; /* Convertendo de pixels para em */
+    }
+
+    .container {
+        padding: 0 10%;
+    }
+
+    .ContentAbout {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .ContentAbout div {
+        margin-left: 0;
+        flex-direction: column;
+        align-items: flex-start;
+        text-align: left;
+    }
+
+    .ContentAbout div h2 {
+        margin-bottom: 0.9375em; /* Convertendo de pixels para em */
+        margin-top: 0.625em; /* Convertendo de pixels para em */
+    }
+
+    .products {
+        justify-content: space-around;
+        align-items: center;
+        flex-wrap: wrap;
+    }
+
+    .item {
+        margin-bottom: 1.25em; /* Convertendo de pixels para em */
+        width: 30%;
+    }
+
+    .ContentAbout img {
+        max-height: 31.25em; /* Convertendo de pixels para em */
+        margin-bottom: 1.25em; /* Convertendo de pixels para em */
+    }
+
+    .aboutText p {
+        margin-top: 0.9375em; /* Convertendo de pixels para em */
+        font-size: 1.125em; /* Convertendo de pixels para em */
+    }
+
+    .sectionProduct {
+        margin-bottom: 2.8125em; /* Convertendo de pixels para em */
+    }
+}
+
+/* Dispositivos pequenos (telefones em paisagem, 640px e abaixo) */
+@media (max-width: 640px) {
+    header {
+        padding: 0 4.0625%; /* Convertendo de pixels para porcentagem */
+    }
+
+    .container {
+        padding: 0 10%;
+    }
+
+    .aboutText p {
+        margin-top: 1.25em; /* Convertendo de pixels para em */
+        font-size: 1.25em; /* Convertendo de pixels para em */
+    }
+
+    .ContentAbout {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .ContentAbout div {
+        margin-left: 0;
+        flex-direction: column;
+        align-items: flex-start;
+        text-align: left;
+        margin-top: 1.875em; /* Convertendo de pixels para em */
+    }
+
+    .ContentAbout div h2 {
+        margin-bottom: 0.9375em; /* Convertendo de pixels para em */
+    }
+
+    .contentAbout div p {
+        font-size: 1em; /* Convertendo de pixels para em */
+    }
+
+    .products {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .item {
+        margin-bottom: 1.25em; /* Convertendo de pixels para em */
+        width: 80%;
+    }
+
+    .ContentAbout img {
+        max-height: 50vh;
+        margin-bottom: 1.25em; /* Convertendo de pixels para em */
+    }
+
+    nav ul li {
+        display: block;
+        padding: 0.3125em 0; /* Convertendo de pixels para em */
+    }
+
+    .sectionProduct h2 {
+        margin-bottom: 3.125em; /* Convertendo de pixels para em */
+    }
+}
